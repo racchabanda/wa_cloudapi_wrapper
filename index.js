@@ -12,7 +12,7 @@ class WhatsappCloud {
         WABA_ID,
     }) {
         this.accessToken = accessToken;
-        this.graphAPIVersion = graphAPIVersion || 'v13.0';
+        this.graphAPIVersion = graphAPIVersion || 'v16.0';
         this.senderPhoneNumberId = senderPhoneNumberId;
         this.baseUrl = `https://graph.facebook.com/${this.graphAPIVersion}/${this.senderPhoneNumberId}`;
         this.WABA_ID = WABA_ID;
@@ -27,7 +27,7 @@ class WhatsappCloud {
 
         if (graphAPIVersion) {
             signale.warn(
-                `Please note, the default "graphAPIVersion" is v13.0. You are using ${graphAPIVersion}. This may result in quirky behavior.`
+                `Please note, the default "graphAPIVersion" is v16.0. You are using ${graphAPIVersion}. This may result in quirky behavior.`
             );
         }
 
