@@ -25,7 +25,7 @@ class WhatsappCloud {
             throw new Error('Missing "senderPhoneNumberId".');
         }
 
-        if (graphAPIVersion != 'v16.0') {
+        if (this.graphAPIVersion != 'v16.0') {
             signale.warn(
                 `Please note, the default "graphAPIVersion" is v16.0. You are using ${graphAPIVersion}. This may result in quirky behavior.`
             );
