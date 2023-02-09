@@ -25,7 +25,7 @@ class WhatsappCloud {
             throw new Error('Missing "senderPhoneNumberId".');
         }
 
-        if (graphAPIVersion) {
+        if (graphAPIVersion != 'v16.0') {
             signale.warn(
                 `Please note, the default "graphAPIVersion" is v16.0. You are using ${graphAPIVersion}. This may result in quirky behavior.`
             );
@@ -57,10 +57,12 @@ class WhatsappCloud {
                     );
                 }
 
+                /*
                 if (!headers) {
                     signale.warn(`WARNING: "headers" is missing.`);
                 }
-
+                */
+                
                 if (method?.toUpperCase() === 'POST' && !body) {
                     signale.warn(
                         `WARNING: "body" is missing. The default body will default to ${JSON.stringify(
